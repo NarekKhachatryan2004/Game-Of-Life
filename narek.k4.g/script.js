@@ -341,23 +341,23 @@ function setup() {
     for (var y = 0; y < matrix.length; y++) {
         for (var x = 0; x < matrix[y].length; x++) {
             if (matrix[y][x] == 1) {
-                var grass = new Grass(x, y, 1);
+                var grass = new Grass(x, y);
                 grassArr.push(grass);
             }
             else if (matrix[y][x] == 2) {
-                var grassEater = new GrassEater(x, y, 2);
+                var grassEater = new GrassEater(x, y);
                 grassEaterArr.push(grassEater);
             }
             else if (matrix[y][x] == 3) {
-                var predator = new Predator(x, y, 3);
+                var predator = new Predator(x, y);
                 PredatorArr.push(predator)
             }
             else if (matrix[y][x] == 4) {
-                var mostOfAll = new MostOfAll(x, y, 4);
+                var mostOfAll = new MostOfAll(x, y);
                 MostOfAllArr.push(mostOfAll)
             }
             else if (matrix[y][x] == 5) {
-                var men = new Men(x, y, 5);
+                var men = new Men(x, y);
                 MenArr.push(men);
             }
 
