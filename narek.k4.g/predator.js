@@ -53,9 +53,9 @@ class Predator extends LivingCreature{
     mul() {
         var newCell = random(this.chooseCell(0));
         if (this.energy >= 11 && newCell) {
-            var newPredator = new Predator(newCell[0], newCell[1], this.index);
+            var newPredator = new Predator(newCell[0], newCell[1], 3);
             PredatorArr.push(newPredator);
-            matrix[newCell[1]][newCell[0]] = this.index;
+            matrix[newCell[1]][newCell[0]] = 3;
             this.energy = 9;
         }
     }
@@ -67,7 +67,7 @@ class Predator extends LivingCreature{
             var y = newCell[1];
 
             matrix[this.y][this.x] = 0;
-            matrix[y][x] = this.index;
+            matrix[y][x] = 3;
             this.x = x;
             this.y = y;
 
@@ -81,7 +81,7 @@ class Predator extends LivingCreature{
             var x = grassEater[0];
             var y = grassEater[1];
 
-            matrix[y][x] = this.index;
+            matrix[y][x] = 3;
             matrix[this.y][this.x] = 0;
 
             for (var i in grassEaterArr) {

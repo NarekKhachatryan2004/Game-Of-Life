@@ -13,9 +13,9 @@ class Men extends LivingCreature{
 
         var newCell = random(this.chooseCell(0));
         if (this.energy >= 15 && newCell) {
-            var newMen = new Men(newCell[0], newCell[1], this.index);
+            var newMen = new Men(newCell[0], newCell[1], 5);
             MenArr.push(newMen);
-            matrix[newCell[1]][newCell[0]] = this.index;
+            matrix[newCell[1]][newCell[0]] = 5;
             this.energy = 13;
 
         }
@@ -32,9 +32,9 @@ class Men extends LivingCreature{
                 this.energy--;
                 var x = newCell[0];
                 var y = newCell[1];
-                matrix[y][x] = this.index;
+                matrix[y][x] = 5;
                 matrix[this.y][this.x] = 1;
-                var newMen = new Men(newCell[0], newCell[1], this.index);
+                var newMen = new Men(newCell[0], newCell[1], 5);
                 MenArr.push(newMen);
                 this.x = x;
                 this.y = y;
@@ -43,9 +43,9 @@ class Men extends LivingCreature{
                 this.energy--;
                 var x1 = newCell1[0];
                 var y1 = newCell1[1];
-                matrix[y1][x1] = this.index;
+                matrix[y1][x1] = 5;
                 matrix[this.y][this.x] = 0;
-                var newMen = new Men(newCell1[0], newCell1[1], this.index);
+                var newMen = new Men(newCell1[0], newCell1[1], 5);
                 MenArr.push(newMen);
                 this.x = x1;
                 this.y = y1;
@@ -69,7 +69,7 @@ class Men extends LivingCreature{
             if (newCell) {
                 var x = newCell[0];
                 var y = newCell[1];
-                matrix[y][x] = this.index;
+                matrix[y][x] = 5;
                 matrix[this.y][this.x] = 0;
                 for (var i in MostOfAllArr) {
                     if (x == MostOfAllArr[i].x && y == MostOfAllArr[i].y) {
@@ -83,7 +83,7 @@ class Men extends LivingCreature{
             else if (newCell1) {
                 var x1 = newCell1[0];
                 var y1 = newCell1[1];
-                matrix[y1][x1] = this.index;
+                matrix[y1][x1] = 5;
                 matrix[this.y][this.x] = 0;
                 for (var i in grassEaterArr) {
                     if (x == grassEaterArr[i].x && y == grassEaterArr[i].y) {
@@ -97,7 +97,7 @@ class Men extends LivingCreature{
             else if (newCell2) {
                 var x2 = newCell2[0];
                 var y2 = newCell2[1];
-                matrix[y2][x2] = this.index;
+                matrix[y2][x2] = 5;
                 matrix[this.y][this.x] = 0;
                 for (var i in grassEaterArr) {
                     if (x == grassEaterArr[i].x && y == grassEaterArr[i].y) {

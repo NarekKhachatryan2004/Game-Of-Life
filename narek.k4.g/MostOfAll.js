@@ -63,9 +63,9 @@ class MostOfAll extends LivingCreature {
 
         var newCell = random(this.chooseCell(0));
         if (this.energy >= 11 && newCell) {
-            var newMostOfAll = new MostOfAll(newCell[0], newCell[1], this.index);
+            var newMostOfAll = new MostOfAll(newCell[0], newCell[1], 4);
             MostOfAllArr.push(newMostOfAll);
-            matrix[newCell[1]][newCell[0]] = this.index;
+            matrix[newCell[1]][newCell[0]] = 4;
             this.energy = 10;
 
         }
@@ -78,7 +78,7 @@ class MostOfAll extends LivingCreature {
             this.energy--;
             var x = newCell[0];
             var y = newCell[1];
-            matrix[y][x] = this.index;
+            matrix[y][x] = 4;
             matrix[this.y][this.x] = 0;
 
             this.x = x;
@@ -101,7 +101,7 @@ class MostOfAll extends LivingCreature {
                 var x = newCell1[0];
                 var y = newCell1[1];
 
-                matrix[y][x] = this.index;
+                matrix[y][x] = 4;
                 matrix[this.y][this.x] = 0;
                 for (var i in PredatorArr) {
                     if (x == PredatorArr[i].x && y == PredatorArr[i].y) {
@@ -116,7 +116,7 @@ class MostOfAll extends LivingCreature {
                 var x1 = newCell[0];
                 var y1 = newCell[1];
 
-                matrix[y1][x1] = this.index
+                matrix[y1][x1] = 4
                 matrix[this.y][this.x] = 0;
                 for (var i in grassEaterArr) {
                     if (x == grassEaterArr[i].x && y == grassEaterArr[i].y) {
@@ -133,7 +133,7 @@ class MostOfAll extends LivingCreature {
                 var x2 = newCell2[0];
                 var y2 = newCell2[1];
 
-                matrix[y2][x2] = this.index
+                matrix[y2][x2] = 4
                 matrix[this.y][this.x] = 0;
                 for (var i in grassArr) {
                     if (x == grassArr[i].x && y == grassArr[i].y) {
