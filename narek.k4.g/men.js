@@ -5,8 +5,8 @@ class Men extends LivingCreature{
 
 
 
-    
-    
+    /*55455*/
+    // /diusudisfy
     }
     
     mul() {
