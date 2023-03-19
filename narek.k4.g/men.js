@@ -1,4 +1,5 @@
-class Men extends LivingCreature{
+let LivingCreature = require("./LivingCreature");
+module.exports = class Men extends LivingCreature{
     constructor(x, y) {
         super(x,y)
         this.energy = 13;
@@ -22,8 +23,10 @@ class Men extends LivingCreature{
     }
     Walking() {
         var walking = [];
-        var newCell = random(this.chooseCell(1));
-        var newCell1 = random(this.chooseCell(0));
+        var emptyCell = this.chooseCell(1)
+        var newCell = emptyCell[Math.floor(Math.random() * emptyCell.length)];
+        var emptyCell1 = this.chooseCell(0);
+        var newCell1 = emptyCell1[Math.floor(Math.random() * emptyCell1.length)];
         walking.push(newCell, newCell1);
         var wal = random(walking);
 
